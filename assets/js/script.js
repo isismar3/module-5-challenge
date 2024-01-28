@@ -6,11 +6,11 @@ $(document).ready(function () {
     let timeBlocks = $('.time-block');
 
     timeBlocks.each(function () {
-      const colorBlock = parseInt($(this).attr("id").split("-")[1]);
+      const colorBlockHour = parseInt($(this).attr("id").split("-")[1]);
 
-      if (blockHour < currentHour) {
+      if (colorBlockHour < currentHour) {
         $(this).addClass("past").removeClass("present future");
-      } else if (blockHour === currentHour) {
+      } else if (colorBlockHour === currentHour) {
         $(this).removeClass("past future").addClass("present");
       } else {
         $(this).removeClass("past present").addClass("future");
